@@ -372,19 +372,19 @@ if SERVER then
 
 	hook.Add("WeaponEquip", "activate_pvp", function (weapon, owner)
 		if BUILD_WEAPONS[weapon:GetClass()] then return end
-
+		owner:SetHealth(owner:GetMaxHealth)
 		owner:PutIntoPVP()
 	end)
 
 	hook.Add("PlayerLeaveVehicle", "deactivate_glide_pvp", function (ply, veh)
 		if ply:HasPVPWeapons() then return end
-
+			
 		ply:MarkAsReadyForBuild()
 	end)
 
 	hook.Add("PlayerEnteredVehicle", "activate_glide_pvp", function (ply, veh, role)
 		if BUILD_VEHICLES[FSB.GetGlideVehicleFromSeat(veh):GetClass()] then return end
-
+		ply:SetHealth(ply:GetMaxHealth) -- Technically 100% is max health
 		ply:PutIntoPVP()
 	end)
 
