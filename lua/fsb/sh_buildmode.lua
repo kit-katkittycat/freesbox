@@ -36,7 +36,15 @@ local BUILD_VEHICLES =
 	["gtav_seashark"] = true,
 	["gtav_speedo"] = true,
 	["gtav_wolfsbane"] = true,
-
+	
+	--Styled's Experiments - Petition #1292
+	["glide_experiments_blazer_aqua"] = true,
+	["glide_experiments_caddy"] = true, 
+	["glide_experiments_deluxo"] = true,
+	["glide_experiments_hot_rod_super"] = true,
+	["glide_experiments_nicoles_car"] = true,
+	["glide_experiments_tubile"] = true,
+	
 	--GTAV Helicopters
 	["glide_gtav_blimp"] = true,
 	["glide_gtav_blimp2"] = true,
