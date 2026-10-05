@@ -20,7 +20,7 @@ local function parseChatJSON(message)
 		if messages[msg.id] == nil then
 			assert(isnumber(msg.id), "Message id not a number")
 			messages[msg.id] = msg
-			chat.AddText(Color(102, 230, 255), "[HTTP] ", Color(255,255,255), msg.author, ": ", msg.text)
+			chat.AddText(Color(102, 230, 255), "[HTTP] ", Color(255,255,255), msg.author, Color(255,255,255),": ", msg.text)
 		end
 	end
 
